@@ -74,7 +74,6 @@ function exec_ogp_module()
 			</td>
 		</tr>
 	</table>
-
 <?php
 }
 ?>
