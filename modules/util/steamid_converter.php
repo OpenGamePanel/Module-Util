@@ -1,105 +1,104 @@
-<?php /*
-SteamID conversion tool by 8088 & KoST
-For more info, visit AlliedModders @ http://forums.alliedmods.net/showthread.php?t=60899
-*/
-?>
-<form method="get" action="">
-	<div >
-		<fieldset style="color:white;background-color:DarkSlateGray">
-			<legend  style="background-color:DarkSlateGray;color:white">Input</legend>
-			<table>
-				<tbody style="color:white;background-color:DarkSlateGray">
-					<tr>
-						<td>SteamID / FriendID / customURL:<br>
-							<input type="hidden" size="70" name="m" value="<?php echo $_GET['m']; ?>">
-							<input type="text" size="70" name="s" value="<?php echo htmlentities(stripslashes(@$_GET['s']),ENT_QUOTES); ?>">
-						</td>
-					</tr>
-					<tr>
-						<td align="right">
-							<input class="button" type="submit" accesskey="s" value="Submit">
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</fieldset>
-	</div>
-</form>
-
 <?php
-$ret=get_input_type(@$_GET['s']);
-if ($ret==''){
-
-}else if (is_string($ret)){
-	echo '<div><fieldset style="background-color:DarkSlateGray;color:white"><legend style="background-color:DarkSlateGray;color:white">Output</legend><table><tbody style="background-color:DarkSlateGray;color:white"><tr><td>';
-	echo $ret;
-	echo '</td></tr></tbody></table></fieldset>';
-	if ($_GET['s']!=='') {	echo $notice; }
-	echo '</div>';
-}else if (is_array($ret)){
-	echo '<div><fieldset style="background-color:DarkSlateGray;color:white"><legend style="background-color:DarkSlateGray;color:white">Output</legend><table><tbody style="background-color:DarkSlateGray;color:white"><tr><td>';
-	convert($ret['type'],$ret['data']);
-	echo '</td></tr></tbody></table></fieldset>';
-	if ($_GET['s']!=='') {	echo @$notice;}
-	echo '</div>';
-}
-
-function convert($type,$data){
-	switch($type){
-		case 'steamid':
-		$main='http://steamcommunity.com/profiles/'.bcadd((($data['auth']*2)+$data['server']),'76561197960265728');
-		echo 'FriendID: <a href="'.$main.'" title="Visit Steam Community page" target="blank">'.bcadd((($data['auth']*2)+$data['server']),'76561197960265728').'</a>';
-		break;
-		case 'friendid':
-		if (substr($data,-1)%2==0) $server=0; else $server=1;
-		$auth=bcsub($data,'76561197960265728');
-		if (bccomp($auth,'0')!=1) {echo "Error: invalid FriendID or SteamID";return;}
-		$auth=bcsub($auth,$server);
-		$auth=bcdiv($auth,2);
-		echo "SteamID for VALVe's GoldSrc and Source Orange Box Engine games:<br>".
-			 'STEAM_0:'.$server.':'.$auth;
-		echo "<br><br>SteamID for VALVe's newer games:<br>".
-			 'STEAM_1:'.$server.':'.$auth;
-		break;
-	}
-}
-
-function get_input_type($data){
-	$data=strtolower(trim($data));
-	if ($data!='') {
-		if (strlen($data)>80) return "too long";
-		if (substr($data,0,7)=='steam_0' or substr($data,0,7)=='steam_1') {
-			$tmp=explode(':',$data);
-			if ((count($tmp)==3) && is_numeric($tmp[1]) && is_numeric($tmp[2])){
-				return array('type'=>'steamid','data'=>array('auth'=>$tmp[2],'server'=>$tmp[1]));
+/*
+ *
+ * OGP - Open Game Panel
+ * Copyright (C) Copyright (C) 2008 - 2012 The OGP Development Team
+ *
+ * http://www.opengamepanel.org/
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ *
+ */
+	include 'util_config.php';
+	
+	session_name($sessionName);
+	session_start();
+	
+	if(!empty($_SESSION['user_id']) && $_SERVER['REQUEST_METHOD'] === 'POST'){
+		function toCommunityID($id){
+			if(preg_match('/^STEAM_/', $id)){
+				$parts = explode(':', $id);
+				return bcadd(bcadd(bcmul($parts[2], '2'), '76561197960265728'), $parts[1]);
+			}elseif(is_numeric($id) && strlen($id) < 16){
+				return bcadd($id, '76561197960265728');
 			}else{
-				return "Error: invalid SteamID";
+				return $id;
 			}
-		}else if ($p=strrpos($data,'/')){
-			$tmp=explode('/',$data);
-			foreach ($tmp as $item){
-				if (is_numeric($item)){
-					$a=$item;
-					break;
-				}
-			}
-			if ((is_numeric($a)) && (preg_match('/7656119/', $a))) return array('type'=>'friendid','data'=>$a);
-			else {
-				$xml = @simplexml_load_file($data."?xml=1");
-				$steamid64=$xml->steamID64;
-				if (!preg_match('/7656119/', $steamid64)) return "Error: invalid link";
-				else return array('type'=>'friendid','data'=>$steamid64);
-			}
-		}else if ((is_numeric($data)) && (preg_match('/7656119/', $data))){
-			return array('type'=>'friendid','data'=>$data);
-		}else{
-			$xml = @simplexml_load_file("http://steamcommunity.com/id/".$data."?xml=1");
-			$steamid64=$xml->steamID64;
-			if (!preg_match('/7656119/', $steamid64)) return "Error: invalid input";
-			else return array('type'=>'friendid','data'=>$steamid64);
 		}
-	}else{
-		return "";
+		
+		function toSteamID($id){
+			if(is_numeric($id) && strlen($id) >= 16){
+				$z = bcdiv(bcsub($id, '76561197960265728'), '2');
+			}elseif(is_numeric($id)){
+				$z = bcdiv($id, '2');
+			}else{
+				return $id;
+			}
+			
+			$y = bcmod($id, '2');
+			return 'STEAM_0:'.$y.':'.floor($z);
+		}
+		
+		function toUserID($id){
+			if(preg_match('/^STEAM_/', $id)){
+				$split = explode(':', $id);
+				return $split[2] * 2 + $split[1];
+			}elseif(preg_match('/^765/', $id) && strlen($id) > 15){
+				return bcsub($id, '76561197960265728');
+			}else{
+				return $id;
+			}
+		}
+		
+		function getSteamId($input){
+			$xml = simplexml_load_file('http://steamcommunity.com/id/'.$input.'?xml=1');
+			$steamId64 = $xml->steamID64;
+			
+			if(preg_match('/^765/', $steamId64) === 0){
+				return false;
+			}else{
+				return (string)$steamId64;	// Cast it to a string, otherwise an SimpleXMLElement Object will be returned.
+			}
+		}
+		
+		function convert($id){
+			if(preg_match('/^\[U:1:[0-9]+\]/', $id)){
+				$id = substr($id, 5, -1);
+			}
+			
+			// Check if the input is in legacyId, communityId, or SteamId3 format.
+			// If it's not, assume it's a custom Id and attempt to get the communityId from what the user entered.
+			if(preg_match('/^STEAM_[01]:[01]:\d+$/', $id) === 0 && preg_match('/^[0-9]/', $id) === 0 && preg_match('/^765/', $id) === 0){
+				if(($steamId = getSteamId($id)) === false){
+					return json_encode(array());
+				}
+				
+				$id = $steamId;
+			}
+			
+			return json_encode(array(
+				'communityId'	=>	toCommunityID($id),
+				'steamId'		=>	toSteamID($id),
+				'steamId3'		=>	'[U:1:'.toUserID($id).']',
+				'steamProfile'	=>	'<a href="http://steamcommunity.com/profiles/'.toCommunityID($id).'">Steam Profile</a>',
+			));
+		}
+		
+		echo convert($_POST['steam_input']);
+	}else{//_SESSION check.
+		header('HTTP/1.0 403 Forbidden');
+		exit;
 	}
-}
 ?>
