@@ -167,7 +167,7 @@ function exec_ogp_module()
 		$("#loading").removeClass('hide').addClass('show');
 		
 		// Load the agents via an external script so the user isn't waiting an eternity if they have several agents and multiple are offline
-		$.getJSON("/modules/util/agents.php", function(data){
+		$.getJSON("modules/util/agents.php", function(data){
 			var agents = "";
 			var agentsOnline = 0;
 			
@@ -228,7 +228,7 @@ function exec_ogp_module()
 				$("#output").removeClass('show').addClass('hide')
 				
 				$("#network_tools button").prop({disabled:true}); // Disable the submit button if we're about to post - preventing stuff being ran several times via spamming the button and/or enter.
-				$.post("/modules/util/network_tools.php", $("#network_tools").serialize(), function(postCommand){
+				$.post("modules/util/network_tools.php", $("#network_tools").serialize(), function(postCommand){
 					$("#loading").removeClass('show').addClass('hide');
 					$("#output").removeClass('hide').addClass('show').html("<pre>" + postCommand + "</pre>");
 					
@@ -244,7 +244,7 @@ function exec_ogp_module()
 		});// ./end network_tools form handling.
 		
 		// ----- Sourcemod Admins -----
-		$.getJSON("/modules/util/addadmin_helper.php", function(gs){
+		$.getJSON("modules/util/addadmin_helper.php", function(gs){
 			if(gs.length === 0){
 				$("#no_servers").removeClass('hide').addClass('show');
 			}else{
@@ -334,7 +334,7 @@ function exec_ogp_module()
 			}
 			
 			if(errors === 0){
-				$.post("/modules/util/addadmin_helper.php", $("#addadmin_form").serialize(), function(postCommand){
+				$.post("modules/util/addadmin_helper.php", $("#addadmin_form").serialize(), function(postCommand){
 					$("#addadmin_response").removeClass('hide').addClass('show').html(postCommand);
 					$("#addadmin_form button").prop({disabled:false});
 				}).fail(function(){
@@ -351,7 +351,7 @@ function exec_ogp_module()
 		// ----- Steam Converter -----
 		$("#steam_converter").on("submit", function(e){
 			$("#steam_converter button").prop({disabled:true});
-			$.post("/modules/util/steamid_converter.php", $("#steam_converter").serialize(), function(steam_data){
+			$.post("modules/util/steamid_converter.php", $("#steam_converter").serialize(), function(steam_data){
 				var json = $.parseJSON(steam_data);
 				
 				if(json.length === 0){
