@@ -310,7 +310,6 @@ function exec_ogp_module()
 			var gamePort = $("#gameserver_port").val();
 			var addSteamid = $("#addSteamid").val();
 			var immunity = $("#immunity").val();
-			var permissionType = $("#sourcemod_perms").val();
 			
 			// Set the message divs back to defaults.
 			$("#invalid_server").removeClass('show').addClass('hide');
@@ -337,7 +336,7 @@ function exec_ogp_module()
 			if(errors === 0){
 				$.post("/modules/util/addadmin_helper.php", $("#addadmin_form").serialize(), function(postCommand){
 					$("#addadmin_response").removeClass('hide').addClass('show').html(postCommand);
-					//$("#addadmin_form button").prop({disabled:false});
+					$("#addadmin_form button").prop({disabled:false});
 				}).fail(function(){
 					$("#invalid_response_admin").removeClass('hide').addClass('show');
 					$("#addadmin_form button").prop({disabled:false});
