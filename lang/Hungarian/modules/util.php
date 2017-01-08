@@ -90,7 +90,7 @@ define('malformed_form', "You submitted a form with malformed hidden elements - 
 define('empty_form_data', "Please fill out all elements of the form.");
 define('server_not_selected', "You haven\'t selected a server.");
 define('invalid_steamid', "You have entered an invalid Steam ID.");
-define('invalid_immunity', "You entered an invalid immunity value.");
-define('submit', "Submit");
+define('invalid_immunity', "Érvénytelen védettségi értéket adtál meg.");
+define('submit', "Beküldés");
 define('post_failed', "The POST action failed. Unable to retrieve a response.");
 ?>
