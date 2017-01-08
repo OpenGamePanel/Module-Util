@@ -22,20 +22,20 @@
  *
  */
 
-define('module_name', "Utilities");
+define('module_name', "Dienstprogramme");
 define('ping', "Ping");
 define('traceroute', "Traceroute");
-define('network_tools', "Network Tools");
+define('network_tools', "Netzwerk-Tools");
 define('sourcemod_admins', "Sourcemod Admins");
 define('steam_converter', "SteamID Converter");
-define('your_ip', "Your IP Address:");
+define('your_ip', "Ihre IP-Adresse:");
 define('loading_agents', "Loading Online Agents...");
-define('loading_failed', "Loading Agents Failed.");
-define('agents_offline', "All agents are offline.");
-define('no_commands', "Sorry, your user account has no commands available.");
-define('remote_target', "Target Address:");
-define('command', "Command:");
-define('select_agent', "Select Agent:");
+define('loading_failed', "Fehler beim Laden von Agenten.");
+define('agents_offline', "Alle Agenten sind offline.");
+define('no_commands', "Es tut uns leid, Ihr Benutzerkonto hat keine Befehle verfügbar.");
+define('remote_target', "Zieladresse:");
+define('command', "Befehl:");
+define('select_agent', "Agent auswählen:");
 define('chdir_failed', "Error: chdir() returned false.");
 define('agent_invalid', "Invalid agent specified.");
 define('networktools_agent_offline', "Unable to execute your command on the selected agent because it is offline.");
@@ -50,17 +50,17 @@ define('command_bad_characters', "Attempted to execute a command with malicious 
 define('command_no_permissions', "Attempted to execute a command with insufficient permissions. Input received: %s %s");
 define('command_executed', "Successfully sent the following command: %s %s");
 define('no_servers', "You have no servers assigned to your account.");
-define('select_server', "Select Server:");
-define('select_server_option', "Select...");
+define('select_server', "Server auswählen:");
+define('select_server_option', "Auswählen...");
 define('steamid', "Steam ID:");
-define('immunity', "Immunity:");
+define('immunity', "Immunität:");
 define('sourcemod_perms', "Sourcemod Permissions:");
 define('sourcemod_perm_root', "Sourcemod Root Flag");
 define('sourcemod_perm_custom', "Sourcemod Custom Flags");
 define('sourcemod_flag_a', "Reserved slot access.");
 define('sourcemod_flag_b', "Generic admin; required for admins.");
-define('sourcemod_flag_c', "Kick other players.");
-define('sourcemod_flag_d', "Ban other players.");
+define('sourcemod_flag_c', "Kick andere Spieler.");
+define('sourcemod_flag_d', "Bann andere Spieler.");
 define('sourcemod_flag_e', "Remove bans.");
 define('sourcemod_flag_f', "Slay/harm other players.");
 define('sourcemod_flag_g', "Change the map or major gameplay features.");
@@ -91,6 +91,6 @@ define('empty_form_data', "Please fill out all elements of the form.");
 define('server_not_selected', "You haven\'t selected a server.");
 define('invalid_steamid', "You have entered an invalid Steam ID.");
 define('invalid_immunity', "You entered an invalid immunity value.");
-define('submit', "Submit");
+define('submit', "Senden");
 define('post_failed', "The POST action failed. Unable to retrieve a response.");
 ?>

@@ -22,25 +22,25 @@
  *
  */
 
-define('module_name', "Utilities");
+define('module_name', "Segédprogramok");
 define('ping', "Ping");
 define('traceroute', "Traceroute");
-define('network_tools', "Network Tools");
+define('network_tools', "Hálózati eszközök");
 define('sourcemod_admins', "Sourcemod Admins");
-define('steam_converter', "SteamID Converter");
-define('your_ip', "Your IP Address:");
+define('steam_converter', "SteamID konvertáló");
+define('your_ip', "Az IP címed");
 define('loading_agents', "Loading Online Agents...");
 define('loading_failed', "Loading Agents Failed.");
 define('agents_offline', "All agents are offline.");
 define('no_commands', "Sorry, your user account has no commands available.");
 define('remote_target', "Target Address:");
-define('command', "Command:");
-define('select_agent', "Select Agent:");
+define('command', "Parancs");
+define('select_agent', "Kiválasztott Agent");
 define('chdir_failed', "Error: chdir() returned false.");
 define('agent_invalid', "Invalid agent specified.");
 define('networktools_agent_offline', "Unable to execute your command on the selected agent because it is offline.");
-define('target_empty', "No remote target given.");
-define('command_empty', "No command selected.");
+define('target_empty', "Nincs távoli célpont megadva.");
+define('command_empty', "Nincs parancs kiválasztva.");
 define('command_unavilable', "The selected command is unavailable on the selected agent.");
 define('target_invalid', "Invalid IP/hostname entered.");
 define('exec_failed', "Timed out while waiting for a response.");
@@ -50,18 +50,18 @@ define('command_bad_characters', "Attempted to execute a command with malicious 
 define('command_no_permissions', "Attempted to execute a command with insufficient permissions. Input received: %s %s");
 define('command_executed', "Successfully sent the following command: %s %s");
 define('no_servers', "You have no servers assigned to your account.");
-define('select_server', "Select Server:");
+define('select_server', "Válassz szervert");
 define('select_server_option', "Select...");
-define('steamid', "Steam ID:");
+define('steamid', "Steam ID");
 define('immunity', "Immunity:");
 define('sourcemod_perms', "Sourcemod Permissions:");
 define('sourcemod_perm_root', "Sourcemod Root Flag");
 define('sourcemod_perm_custom', "Sourcemod Custom Flags");
 define('sourcemod_flag_a', "Reserved slot access.");
 define('sourcemod_flag_b', "Generic admin; required for admins.");
-define('sourcemod_flag_c', "Kick other players.");
-define('sourcemod_flag_d', "Ban other players.");
-define('sourcemod_flag_e', "Remove bans.");
+define('sourcemod_flag_c', "Más játékos kirúgása.");
+define('sourcemod_flag_d', "Más játékos kitiltása.");
+define('sourcemod_flag_e', "Kitiltások eltávolítása.");
 define('sourcemod_flag_f', "Slay/harm other players.");
 define('sourcemod_flag_g', "Change the map or major gameplay features.");
 define('sourcemod_flag_h', "Change most CVARs.");
