@@ -27,7 +27,7 @@ define('ping', "Ping");
 define('traceroute', "Traceroute");
 define('network_tools', "Netzwerk-Tools");
 define('sourcemod_admins', "Sourcemod Admins");
-define('steam_converter', "SteamID Converter");
+define('steam_converter', "SteamID Konverter");
 define('your_ip', "Ihre IP-Adresse:");
 define('loading_agents', "Loading Online Agents...");
 define('loading_failed', "Fehler beim Laden von Agenten.");
