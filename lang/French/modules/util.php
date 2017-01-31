@@ -33,7 +33,7 @@ define('loading_agents', "Chargement des Agents en ligne...");
 define('loading_failed', "Echec du chargement des Agents.");
 define('agents_offline', "Tous les Agents sont hors-ligne");
 define('no_commands', "Désolé, votre compte d'utilisateur n'a aucune commande disponible.");
-define('remote_target', "Adresse Cible");
+define('remote_target', "Adresse Cible:");
 define('command', "Commande:");
 define('select_agent', "Sélectionner un Agent:");
 define('chdir_failed', "Erreur: chdir() returned false.");
@@ -50,7 +50,7 @@ define('command_bad_characters', "Tentative d'exécution d'une commande avec des
 define('command_no_permissions', "Tentative d'exécution d'une commande avec des permissions insuffisantes. Entrée reçue: %s %s");
 define('command_executed', "La commande suivante a bien été envoyée: %s %s");
 define('no_servers', "Il n'y a pas de serveur de jeu disponible sur votre compte.");
-define('select_server', "Choisissez un serveur");
+define('select_server', "Choisissez un serveur:");
 define('select_server_option', "Sélectionner...");
 define('steamid', "Steam ID:");
 define('immunity', "Immunité:");
@@ -83,7 +83,7 @@ define('reload_admins_success', "Ajout de %s à admins_simple.ini réussi, ainsi
 define('add_success_no_rcon', "Ajout de %s à votre fichier admins_simple.ini réussi, mais impossible de recharger le cache admin.");
 define('writefile_error', "Il y a eu une erreur inconnue lors de l'écriture de: %s");
 define('remotefile_nonexistent', "Impossible d'ajouter un nouvel admin. Le fichier d'admin: %s n'existe pas sur ce serveur");
-define('empty_flag_list', "Vous n'avez sélectionné aucun admin flag.");
+define('empty_flag_list', "Vous n'avez sélectionné aucun admin flags.");
 define('invalid_steam_format', "Le SteamID entré ne correspond pas à ce qui est requis.");
 define('selected_server_offline', "Impossible d'ajouter un admin, l'Agent qui contrôle le serveur sélectionné est déconnecté.");
 define('malformed_form', "Vous avez soumis un formulaire avec des éléments cachés mal formés - impossible d'ajouter un administrateur.");
