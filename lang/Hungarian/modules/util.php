@@ -41,7 +41,7 @@ define('agent_invalid', "Érvénytelen Agent megjelölve.");
 define('networktools_agent_offline', "Unable to execute your command on the selected agent because it is offline.");
 define('target_empty', "Nincs távoli célpont megadva.");
 define('command_empty', "Nincs parancs kiválasztva.");
-define('command_unavilable', "The selected command is unavailable on the selected agent.");
+define('command_unavilable', "A kiválasztott parancs nem érhető el a kiválasztott Agenten.");
 define('target_invalid', "Érvénytelen a megadott IP/állomásnév.");
 define('exec_failed', "Időtúllépés a válaszra várás alatt.");
 define('command_no_access', "You do not have access to this command. This incident will be logged.");
