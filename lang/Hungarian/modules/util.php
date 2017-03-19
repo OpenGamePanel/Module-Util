@@ -36,7 +36,7 @@ define('no_commands', "Sajnáljuk, de a felhasználói fiókodnak nincsennek el�
 define('remote_target', "Target Address:");
 define('command', "Parancs");
 define('select_agent', "Kiválasztott Agent");
-define('chdir_failed', "Error: chdir() returned false.");
+define('chdir_failed', "Hiba: chdir() visszatérési kód hamis.");
 define('agent_invalid', "Érvénytelen Agent megjelölve.");
 define('networktools_agent_offline', "Unable to execute your command on the selected agent because it is offline.");
 define('target_empty', "Nincs távoli célpont megadva.");
