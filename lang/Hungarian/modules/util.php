@@ -62,7 +62,7 @@ define('sourcemod_flag_b', "Általános admin; szükséges az adminhoz.");
 define('sourcemod_flag_c', "Más játékos kirúgása.");
 define('sourcemod_flag_d', "Más játékos kitiltása.");
 define('sourcemod_flag_e', "Kitiltások eltávolítása.");
-define('sourcemod_flag_f', "Slay/harm other players.");
+define('sourcemod_flag_f', "Megölni/ártani más játékosnak.");
 define('sourcemod_flag_g', "Pályaválasztás vagy egyéb játék beállítasok módosítása.");
 define('sourcemod_flag_h', "CVAR-ok módosítása.");
 define('sourcemod_flag_i', "Konfigurációs fájlok végrehajtása.");
