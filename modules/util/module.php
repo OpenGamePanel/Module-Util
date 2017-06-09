@@ -23,10 +23,10 @@
  */
 
 // Module general information
-$module_title = "Util";
+$module_title = "Utilities";
 $module_version = "2.0";
 $db_version = 0;
 $module_required = TRUE;
-$module_menus = array( array( 'subpage' => '', 'name'=>'Util', 'group'=>'user' ) );
+$module_menus = array( array( 'subpage' => '', 'name'=>'Utilities', 'group'=>'user' ) );
 ?>
 
