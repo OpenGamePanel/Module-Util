@@ -72,7 +72,7 @@ define('sourcemod_flag_l', "Jelszó beállítása a szerveren.");
 define('sourcemod_flag_m', "RCON parancsok használata.");
 define('sourcemod_flag_n', "Változtasd meg az sv_cheats változót vagy használj cheat parancsokat.");
 define('sourcemod_flag_o', "1. Egyéni csoport");
-define('sourcemod_flag_p', "2. egyéni csoport.");
+define('sourcemod_flag_p', "2. egyéni csoport");
 define('sourcemod_flag_q', "3. egyéni csoport.");
 define('sourcemod_flag_r', "4. egyéni csoport.");
 define('sourcemod_flag_s', "5. egyéni csoport.");
