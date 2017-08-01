@@ -38,7 +38,7 @@ define('command', "Команда:");
 define('select_agent', "Выберите Агента:");
 define('chdir_failed', "Ошибка: chdir() вернул ошибку.");
 define('agent_invalid', "Invalid Agent specified.");
-define('networktools_agent_offline', "Невозможно выполнить команду над выбранным Агенте, поскольку он не в сети.");
+define('networktools_agent_offline', "Unable to execute your command on the selected Agent, because it is offline.");
 define('target_empty', "Цель не выбрана.");
 define('command_empty', "Команда не выбрана.");
 define('command_unavilable', "Выбранная команда недоступна для выбранного агента.");

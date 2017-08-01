@@ -38,7 +38,7 @@ define('command', "دستور:");
 define('select_agent', "انتخاب Agent:");
 define('chdir_failed', "Error: chdir() returned false.");
 define('agent_invalid', "Invalid Agent specified.");
-define('networktools_agent_offline', "Unable to execute your command on the selected agent because it is offline.");
+define('networktools_agent_offline', "Unable to execute your command on the selected Agent, because it is offline.");
 define('target_empty', "No remote target given.");
 define('command_empty', "No command selected.");
 define('command_unavilable', "The selected command is unavailable on the selected agent.");

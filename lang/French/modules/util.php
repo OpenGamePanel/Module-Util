@@ -38,7 +38,7 @@ define('command', "Commande:");
 define('select_agent', "Sélectionner un Agent:");
 define('chdir_failed', "Erreur: chdir() returned false.");
 define('agent_invalid', "Invalid Agent specified.");
-define('networktools_agent_offline', "Impossible d'exécuter votre commande sur l'Agent sélectionné car il est hors-ligne.");
+define('networktools_agent_offline', "Unable to execute your command on the selected Agent, because it is offline.");
 define('target_empty', "Aucune cible distante spécifiée.");
 define('command_empty', "Aucune commande sélectionnée.");
 define('command_unavilable', "La commande spécifiée est indisponible sur l'Agent sélectionné.");
