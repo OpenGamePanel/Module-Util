@@ -56,8 +56,7 @@ define('OGP_LANG_steamid', "Steam ID:");
 define('OGP_LANG_immunity', "Immunität:");
 define('OGP_LANG_sourcemod_perms', "Sourcemod Rechte:");
 define('OGP_LANG_sourcemod_perm_root', "Sourcemod Root Flag");
-define('OGP_LANG_sourcemod_perm_custom', "Sourcemod Benutzerdefinierte Flags
-");
+define('OGP_LANG_sourcemod_perm_custom', "Sourcemod Benutzerdefinierte Flags");
 define('OGP_LANG_sourcemod_flag_a', "Reservierter Slot Zugriffe.");
 define('OGP_LANG_sourcemod_flag_b', "Generic admin; required for admins.");
 define('OGP_LANG_sourcemod_flag_c', "Kick andere Spieler.");
