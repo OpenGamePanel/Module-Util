@@ -92,5 +92,5 @@ define('OGP_LANG_server_not_selected', "No ha seleccionado un servidor.");
 define('OGP_LANG_invalid_steamid', "Ha introducido un Steam ID no válido.");
 define('OGP_LANG_invalid_immunity', "Ha introducido un valor de inmunidad no válido.");
 define('OGP_LANG_submit', "Enviar");
-define('OGP_LANG_post_failed', "La acción ANTERIOR fallo. No se puede recuperar una respuesta.");
+define('OGP_LANG_post_failed', "La acción POST falló. No se puede recuperar una respuesta.");
 ?>
