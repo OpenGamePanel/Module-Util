@@ -67,8 +67,8 @@ define('OGP_LANG_sourcemod_flag_g', "Pályaválasztás vagy egyéb játék beál
 define('OGP_LANG_sourcemod_flag_h', "CVAR-ok módosítása.");
 define('OGP_LANG_sourcemod_flag_i', "Konfigurációs fájlok végrehajtása.");
 define('OGP_LANG_sourcemod_flag_j', "Speciális chat jogok.");
-define('OGP_LANG_sourcemod_flag_k', "Szavazások elindítása vagy létrehozása.");
-define('OGP_LANG_sourcemod_flag_l', "Jelszó beállítása a szerveren.");
+define('OGP_LANG_sourcemod_flag_k', "Szavazások indítása vagy létrehozása.");
+define('OGP_LANG_sourcemod_flag_l', "Egy jelszó beállítása a szerveren.");
 define('OGP_LANG_sourcemod_flag_m', "RCON parancsok használata.");
 define('OGP_LANG_sourcemod_flag_n', "Változtasd meg az sv_cheats változót vagy használj cheat parancsokat.");
 define('OGP_LANG_sourcemod_flag_o', "1. Egyéni csoport");
