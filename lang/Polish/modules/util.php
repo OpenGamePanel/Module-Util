@@ -22,13 +22,13 @@
  *
  */
 
-define('OGP_LANG_module_name', "Utilities");
+define('OGP_LANG_module_name', "Narzędzia");
 define('OGP_LANG_ping', "Ping");
 define('OGP_LANG_traceroute', "Traceroute");
-define('OGP_LANG_network_tools', "Network Tools");
+define('OGP_LANG_network_tools', "Narzędzia sieciowe");
 define('OGP_LANG_sourcemod_admins', "Sourcemod Admins");
-define('OGP_LANG_steam_converter', "SteamID Converter");
-define('OGP_LANG_your_ip', "Your IP Address:");
+define('OGP_LANG_steam_converter', "Konwenter SteamID");
+define('OGP_LANG_your_ip', "Twój adres IP");
 define('OGP_LANG_loading_agents', "Loading online Agents...");
 define('OGP_LANG_loading_failed', "Loading Agents failed.");
 define('OGP_LANG_agents_offline', "All Agents are offline.");
