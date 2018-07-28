@@ -112,7 +112,7 @@ define('OGP_LANG_amx_mod_flag_h', "commande amx_cfg");
 define('OGP_LANG_amx_mod_flag_i', "amx_chat et autres commandes de chat");
 define('OGP_LANG_amx_mod_flag_j', "amx_vote et autres commandes de vote");
 define('OGP_LANG_amx_mod_flag_k', "accès à la cvar sv_password (par commande amx_cvar)");
-define('OGP_LANG_amx_mod_flag_l', "accès aux cvar amx_rcon command et rcon_password (par commande amx_cvar)");
+define('OGP_LANG_amx_mod_flag_l', "accès à la commande amx_rcon et la cvar rcon_password (par commande amx_cvar)");
 define('OGP_LANG_amx_mod_flag_m', "custom level A (pour plugins additionnels)");
 define('OGP_LANG_amx_mod_flag_n', "custom level B");
 define('OGP_LANG_amx_mod_flag_o', "custom level C");
