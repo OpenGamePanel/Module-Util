@@ -23,8 +23,8 @@
  */
 
 define('OGP_LANG_module_name', "Utilities");
-define('OGP_LANG_ping', "Ping");
-define('OGP_LANG_traceroute', "Traceroute");
+define('OGP_LANG_ping', "пинг");
+define('OGP_LANG_traceroute', "Трассировка");
 define('OGP_LANG_network_tools', "Сетевые утилиты");
 define('OGP_LANG_sourcemod_admins', "Админы Sourcemod");
 define('OGP_LANG_steam_converter', "Конвертер SteamID");
