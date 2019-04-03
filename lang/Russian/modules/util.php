@@ -111,15 +111,15 @@ define('OGP_LANG_amx_mod_flag_g', "amx_cvar command (not all cvars will be avail
 define('OGP_LANG_amx_mod_flag_h', "amx_cfg command");
 define('OGP_LANG_amx_mod_flag_i', "amx_chat and other chat commands");
 define('OGP_LANG_amx_mod_flag_j', "amx_vote and other vote commands");
-define('OGP_LANG_amx_mod_flag_k', "access to sv_password cvar (by amx_cvar command)");
-define('OGP_LANG_amx_mod_flag_l', "access to amx_rcon command and rcon_password cvar (by amx_cvar command)");
+define('OGP_LANG_amx_mod_flag_k', "Доступ к sv_password cvar (по команде amx_cvar)");
+define('OGP_LANG_amx_mod_flag_l', "Доступ к команде amx_rcon и rcon_password cvar (по команде amx_cvar)");
 define('OGP_LANG_amx_mod_flag_m', "custom level A (for additional plugins)");
-define('OGP_LANG_amx_mod_flag_n', "custom level B");
-define('OGP_LANG_amx_mod_flag_o', "custom level C");
-define('OGP_LANG_amx_mod_flag_p', "custom level D");
-define('OGP_LANG_amx_mod_flag_q', "custom level E");
-define('OGP_LANG_amx_mod_flag_r', "custom level F");
-define('OGP_LANG_amx_mod_flag_s', "custom level G");
-define('OGP_LANG_amx_mod_flag_t', "custom level H");
-define('OGP_LANG_amx_mod_flag_u', "menu access");
+define('OGP_LANG_amx_mod_flag_n', "Уровень прав B");
+define('OGP_LANG_amx_mod_flag_o', "Уровень прав C");
+define('OGP_LANG_amx_mod_flag_p', "Уровень прав D");
+define('OGP_LANG_amx_mod_flag_q', "Уровень прав E");
+define('OGP_LANG_amx_mod_flag_r', "Уровень прав F");
+define('OGP_LANG_amx_mod_flag_s', "Уровень прав G");
+define('OGP_LANG_amx_mod_flag_t', "Уровень прав H");
+define('OGP_LANG_amx_mod_flag_u', "Меню доступа");
 ?>
