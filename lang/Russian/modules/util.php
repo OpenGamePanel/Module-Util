@@ -22,7 +22,7 @@
  *
  */
 
-define('OGP_LANG_module_name', "Utilities");
+define('OGP_LANG_module_name', "Утилиты");
 define('OGP_LANG_ping', "пинг");
 define('OGP_LANG_traceroute', "Трассировка");
 define('OGP_LANG_network_tools', "Сетевые утилиты");
@@ -94,7 +94,7 @@ define('OGP_LANG_invalid_immunity', "Вы ввели недопустимое з
 define('OGP_LANG_submit', "Отправить");
 define('OGP_LANG_post_failed', "Действие POST не выполнено. Не удалось получить ответ.");
 define('OGP_LANG_amx_mod_admins', "AMX mod X Admins");
-define('OGP_LANG_amx_login_type', "Login Type");
+define('OGP_LANG_amx_login_type', "Тип входа");
 define('OGP_LANG_amx_login_steamid', "Steam ID");
 define('OGP_LANG_amx_login_nick_pass', "Nickname + Password");
 define('OGP_LANG_nickname', "Nickname");
